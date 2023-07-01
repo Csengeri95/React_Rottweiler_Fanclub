@@ -1,6 +1,6 @@
 import './App.scss';
 import Navbar from './components/Navbar';
-import { BrowserRouter as Router } from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom";
 import Content from './components/Content';
 import Home from './pages/Home';
 import Introduce from './pages/Introduce';
