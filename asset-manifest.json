@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/React_Rottweiler_Fanclub/static/css/main.7347b8b1.css",
+    "main.js": "/React_Rottweiler_Fanclub/static/js/main.e093a627.js",
+    "static/media/history.jpg": "/React_Rottweiler_Fanclub/static/media/history.ae005351f53cea33b22b.jpg",
+    "static/media/img1.jpg": "/React_Rottweiler_Fanclub/static/media/img1.53e33ab5c7390843daaf.jpg",
+    "static/media/img13-1280.jpg": "/React_Rottweiler_Fanclub/static/media/img13-1280.01dd4250a401fc4abbb6.jpg",
+    "static/media/img3.JPG": "/React_Rottweiler_Fanclub/static/media/img3.dc5707ef3e1704f7cc43.JPG",
+    "static/media/img9-1280.jpg": "/React_Rottweiler_Fanclub/static/media/img9-1280.4e98a173a5c25f28d5aa.jpg",
+    "static/media/img8-1280.jpg": "/React_Rottweiler_Fanclub/static/media/img8-1280.a2fd44d2c9a34a4d910e.jpg",
+    "static/media/img15-1280.jpg": "/React_Rottweiler_Fanclub/static/media/img15-1280.d178bc9064aeb9d51622.jpg",
+    "static/media/img10-1280.jpg": "/React_Rottweiler_Fanclub/static/media/img10-1280.22fd517a59f10e5e571a.jpg",
+    "static/media/img16-1280.jpg": "/React_Rottweiler_Fanclub/static/media/img16-1280.79c86e6d9e53272e7a72.jpg",
+    "static/media/img11-1280.jpg": "/React_Rottweiler_Fanclub/static/media/img11-1280.eee956b2341aab1b47f9.jpg",
+    "static/media/img14.jpg": "/React_Rottweiler_Fanclub/static/media/img14.ad950780cefe04dafc9f.jpg",
+    "static/media/logo-remove.png": "/React_Rottweiler_Fanclub/static/media/logo-remove.43ed04f333e23dd68070.png",
+    "index.html": "/React_Rottweiler_Fanclub/index.html",
+    "main.7347b8b1.css.map": "/React_Rottweiler_Fanclub/static/css/main.7347b8b1.css.map",
+    "main.e093a627.js.map": "/React_Rottweiler_Fanclub/static/js/main.e093a627.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7347b8b1.css",
+    "static/js/main.e093a627.js"
+  ]
+}
