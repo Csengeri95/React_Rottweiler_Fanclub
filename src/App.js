@@ -1,24 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Navbar from './components/Navbar';
+import { BrowserRouter as Router } from "react-router-dom";
+import Content from './components/Content';
+import Home from './pages/Home';
+import Introduce from './pages/Introduce';
+import Footer from './components/Footer';
+import Events from './pages/Events';
+import { useEffect, useState } from 'react';
+import Contact from './pages/Contact';
+import { NavbarContext, NavbarContextDefaults } from './contexts/NavbarContext';
+
+const config = require("../package.json");
 
 function App() {
+
+  const [navbar, setNavbar] = useState(NavbarContextDefaults.value)
+
+  const pages = [
+    { id: 1, name: "Kezdőlap", path: "/", element: <Home /> },
+    { id: 2, name: "Bemutatás", path: "/introduce", element: <Introduce /> },
+    { id: 3, name: "Események", path: "/events", element: <Events /> },
+    { id: 4, name: "Kapcsolat", path: "/contact", element: <Contact /> },
+  ]
+
+  useEffect(() => {
+    document.title = config.name
+  })
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <NavbarContext.Provider value={{ navbar, setNavbar }} >
+      <div className="App">
+
+
+
+        <Router>
+
+          <Navbar pages={pages} />
+          <Content routes={pages} />
+          <Footer />
+
+        </Router>
+      </div>
+    </NavbarContext.Provider>
   );
 }
 

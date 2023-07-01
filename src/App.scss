@@ -1,0 +1,65 @@
+@use 'variables';
+@import 'mixins';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: variables.$body-font-family;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: variables.$bg-color;
+}
+
+.flex{
+  display: flex;
+}
+
+.text-center{
+  text-align: center
+}
+
+@include respgrid();
+
+@media only screen and (min-width: 540px) {
+  @include respgrid('-sm');
+}
+
+@media only screen and (min-width: 720px) {
+  @include respgrid('-md');
+}
+
+@media only screen and (min-width: 960px) {
+  @include respgrid('-lg');
+}
+
+@media only screen and (min-width: 1140px) {
+  @include respgrid('-xl');
+}
+
+@media only screen and (min-width: 1600px) {
+  @include respgrid('-xxl');
+}
+
+@include widths(25);
+@include widths(50);
+@include widths(75);
+@include widths(100);
+
+@include spacings(0);
+@include spacings(1);
+@include spacings(2);
+@include spacings(3);
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+}

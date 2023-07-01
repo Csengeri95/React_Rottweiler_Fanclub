@@ -1,0 +1,11 @@
+@use '../variables';
+@import '../mixins.scss';
+
+.footer{
+    @include flex();
+    background-color: variables.$navbar-background-color;
+    color:variables.$color-light;
+    font-weight: 400;
+    min-height:12vh;
+
+}

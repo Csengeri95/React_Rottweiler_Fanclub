@@ -1,0 +1,89 @@
+@use "../variables";
+@import "../mixins.scss";
+@import "../templates";
+
+.introduce {
+    min-height: 90vh;
+    font-family: variables.$body-font-family;
+
+
+    .container {
+        @include flex();
+        flex-direction: column;
+        padding: 0 1rem;
+
+        .card {
+            @extend %cardProperty;
+            flex-direction: column;
+            border: 1px solid variables.$color-dark-gray;
+            width: 95%;
+            min-height: 150px;
+
+            @media screen and (min-width:variables.$bg-size-lg) {
+                & {
+                    flex-direction: row;
+                    height: auto;
+                }
+
+                &:nth-child(even) {
+                    flex-direction: row-reverse
+                }
+            }
+
+            @media screen and (min-width:variables.$bg-size-xl) {
+                & {
+                    width: 85%;
+                    height: auto;
+                }
+            }
+
+            @media screen and (min-width:variables.$bg-size-xxl) {
+                & {
+                    width: 70%;
+                    max-height: 350px;
+                }
+            }
+
+            img {
+                @extend %imgProperty;
+                border-radius: 1rem;
+
+                @media screen and (min-width:variables.$bg-size-lg) {
+                    & {
+                        width: 50%;
+                        height: auto;
+                    }
+                }
+            }
+
+            .card-body {
+                padding: 0 1rem 1rem 1rem;
+                height: 100%;
+
+
+                h4 {
+                    margin-top: .5rem;
+                    margin-bottom: .5rem;
+                    text-decoration: underline;
+
+                    @media screen and (min-width:variables.$bg-size-md) {
+                        font-size: 1.4rem;
+                    }
+                }
+
+                p {
+                    text-align: justify;
+                    font-weight: 500;
+                    margin-bottom: .3rem;
+
+                    @media screen and (min-width:variables.$bg-size-md) {
+                        font-size: 1.1rem;
+                        line-height: 1.3;
+                    }
+
+
+                }
+            }
+        }
+    }
+}

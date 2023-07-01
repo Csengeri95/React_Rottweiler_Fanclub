@@ -1,0 +1,10 @@
+@import "../templates";
+
+.logo {
+    width: 60px;
+
+
+    img {
+        @extend %imgProperty;
+    }
+}

@@ -1,0 +1,100 @@
+@use "../variables";
+@import "../mixins";
+@import "../templates";
+
+.contact {
+    min-height:85vh;
+
+
+
+    .form-container {
+        @include flex();
+        
+
+        form {
+            @extend %cardProperty;
+            background-color: variables.$color-pale-yellow;
+            width: 90%;
+            flex-direction: column;
+            align-items: center;
+            max-height: auto;
+            color:variables.$color-dark;
+
+            @media screen and (min-width:variables.$bg-size-md) {
+                width: 70%;
+            }
+
+            @media screen and (min-width:variables.$bg-size-xl) {
+                width: 50%;
+            }
+
+
+
+            label,
+            textarea,
+            input {
+                outline: none;
+                border-radius: 5px;
+            }
+
+            input {
+                border: none;
+                background: transparent;
+                font-size: 1rem;
+                border-bottom: 2px solid variables.$color-dark;
+                padding: 5px;
+                width: 40%;
+
+                @media screen and (min-width:variables.$bg-size-xl) {
+                    width: 60%;
+                }
+            }
+
+            label {
+                margin-bottom: .5rem;
+                border: 1px solid black;
+                width: 40%;
+                padding: 0.5rem 0;
+                font-size: 1.1rem;
+                font-weight: 600;
+
+                @media screen and (min-width:variables.$bg-size-xl) {
+                    width: 60%;
+                }
+
+            }
+
+            button {
+                @extend %buttonProperty;
+                width: 150px;
+                font-size: 1.1rem;
+                border-radius: 5px;
+                padding: 5px 12px;
+
+            }
+
+            textarea{
+                font-size: 1rem;
+            }
+
+            .success{
+                width: 90%;
+                background-color: variables.$color-success;
+                height:50px;
+                padding: 10px;
+                color:variables.$color-light;
+                font-weight: 700;
+                border-radius: .5rem;
+            }
+
+            .error{
+                color:variables.$color-error;
+                font-weight: 700;
+            }
+
+        }
+
+    }
+
+
+}

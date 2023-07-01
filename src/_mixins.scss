@@ -1,0 +1,122 @@
+@mixin respgrid($size: '') {
+    .col#{$size}-1 {
+        width: 8.33%;
+    }
+
+    .col#{$size}-2 {
+        width: 16.66%;
+    }
+
+    .col#{$size}-3 {
+        width: 25%;
+    }
+
+    .col#{$size}-4 {
+        width: 33.33%;
+    }
+
+    .col#{$size}-5 {
+        width: 41.66%;
+    }
+
+    .col#{$size}-6 {
+        width: 50%;
+    }
+
+    .col#{$size}-7 {
+        width: 58.33%;
+    }
+
+    .col#{$size}-8 {
+        width: 66.66%;
+    }
+
+    .col#{$size}-9 {
+        width: 75%;
+    }
+
+    .col#{$size}-10 {
+        width: 83.33%;
+    }
+
+    .col#{$size}-11 {
+        width: 91.66%;
+    }
+
+    .col#{$size}-12 {
+        width: 100%;
+    }
+}
+
+@mixin widths($percentage) {
+    .w-#{$percentage} {
+        width: $percentage*1%;
+    }
+}
+
+@mixin spacings($unit) {
+    .m-#{$unit} {
+        margin: $unit*1rem $unit*1rem $unit*1rem $unit*1rem;
+    }
+
+    .mx-#{$unit} {
+        margin: 0 $unit*1rem 0 $unit*1rem;
+    }
+
+    .my-#{$unit} {
+        margin: $unit*1rem 0 $unit*1rem 0;
+    }
+
+    .mt-#{$unit} {
+        margin-top: $unit*1rem;
+    }
+
+    .mb-#{$unit} {
+        margin-bottom: $unit*1rem;
+    }
+
+    .mr-#{$unit} {
+        margin-right: $unit*1rem;
+    }
+
+    .ml-#{$unit} {
+        margin-left: $unit*1rem;
+    }
+
+    .p-#{$unit} {
+        padding: $unit*1rem $unit*1rem $unit*1rem $unit*1rem;
+    }
+
+    .px-#{$unit} {
+        padding: 0 $unit*1rem 0 $unit*1rem;
+    }
+
+    .py-#{$unit} {
+        padding: $unit*1rem 0 $unit*1rem 0;
+    }
+
+    .pt-#{$unit} {
+        padding-top: $unit*1rem;
+    }
+
+    .pb-#{$unit} {
+        padding-bottom: $unit*1rem;
+    }
+
+    .pr-#{$unit} {
+        padding-right: $unit*1rem;
+    }
+
+    .pl-#{$unit} {
+        padding-left: $unit*1rem;
+    }
+}
+
+@mixin flex($justify: center, $align: center) {
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin transition($unit: all, $second: 0.2s, $method: ease-in-out) {
+    transition: $unit $second $method
+}

@@ -1,0 +1,89 @@
+@use "../variables";
+@import "../templates";
+@import "../mixins.scss";
+
+
+.events {
+    min-height: 85vh;
+    flex-direction: column;
+    
+
+    .select select {
+        width: 180px;
+        height: 30px;
+        outline: none;
+        border-radius: 5px;
+        @media screen and (min-width:variables.$bg-size-lg) {
+            margin-bottom: 1rem;
+        }
+
+    }
+
+    .container {
+        @include flex();
+        flex-direction: column;
+        
+
+        @media screen and (min-width:variables.$bg-size-lg) {
+            & {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                @include flex();
+                gap: 10px;
+                
+
+
+            }
+        }
+
+        .card {
+            @extend %cardProperty;
+            width: 90%;
+            background-color: variables.$color-pale-yellow;
+
+            @media screen and (min-width:variables.$bg-size-lg) {
+                & {
+                    width: 90%;
+                    margin: auto;
+                    min-height: 200px;
+                }
+            }
+
+
+            h2 {
+                color: variables.$color-orange;
+            }
+
+            .card-date {
+                color: variables.$color-light-blue;
+                padding-right: .5rem;
+                margin-right: .5rem;
+                border-right: 1px solid variables.$color-dark;
+            }
+
+            .card-text {
+                text-align: justify;
+
+                p {
+                    margin-bottom: .3rem;
+                    font-weight: 600;
+                }
+
+                a {
+                    @extend %linkProperty;
+                }
+            }
+
+
+        }
+
+    }
+
+    .calendar{
+        @media screen and (max-width:variables.$bg-size-lg) {
+            display: none;
+        }
+        @include flex();
+       
+    }
+}

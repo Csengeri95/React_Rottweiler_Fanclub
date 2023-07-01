@@ -1,0 +1,74 @@
+@use '../variables';
+@import '../mixins.scss';
+
+
+.navbar {
+    @include flex($justify: space-between, $align: center);
+    height: 70px;
+    background: variables.$navbar-background-color;
+    color: variables.$color-dark-gray;
+    font-family: variables.$navbar-font-family;
+
+    @media screen and (max-width:variables.$bg-size-lg) {
+        & {
+            position: relative;
+            top: 0;
+            width: 100%;
+        }
+    }
+
+
+    .navbar-links {
+
+        @include flex($justify: space-evenly, $align: center);
+        list-style: none;
+        width: 75%;
+
+        @media screen and (max-width:variables.$bg-size-lg) {
+            & {
+                display: none;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: variables.$color-light;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin: 0 1rem;
+
+            &:hover {
+                color: variables.$color-link-hover;
+            }
+        }
+
+        .active {
+            color: variables.$color-link-hover;
+        }
+
+    }
+}
+
+
+@media screen and (max-width:variables.$bg-size-lg) {
+    .navbar-mobile {
+        position: absolute;
+        flex-direction: column;
+        top: 65px;
+        right: 0px;
+        list-style: none;
+        background-color: variables.$navbar-background-color;
+        width: inherit;
+        z-index: 55;
+        border-top: 1px solid variables.$color-light;
+
+        a {
+            color: variables.$color-light;
+            padding: .4rem;
+            transition: all .4s ease;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+    }
+}

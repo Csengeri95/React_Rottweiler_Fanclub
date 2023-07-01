@@ -1,0 +1,44 @@
+@use 'variables';
+
+%imgProperty {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+%imgCarousel {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 1rem;
+}
+
+%buttonProperty {
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+}
+
+
+
+%cardProperty {
+    border: 1px solid variables.$navbar-background-color;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 1rem variables.$color-dark-op3;
+}
+
+%cardText {
+    font-weight: 500;
+    line-height: 1.2;
+    color: variables.$bg-color;
+    font-size: 1.125rem;
+
+}
+
+%linkProperty{
+    text-decoration: none;
+                color:variables.$color-link-hover;
+                font-weight: 700;
+}
